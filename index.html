@@ -1,7 +1,12 @@
 <html>
 <head>
 <title>Table of Phone Numbers</title>
-
+<input type="text" class="hk">
+<input type="text" class="hk">
+<input type="text" class="hk">
+<input type="text" class="hk">
+<input type="text" class="hk">
+<button onclick="fun()">press</button>
 </head>
 <body>
 
@@ -11,16 +16,20 @@
 
 <script>
 
+function fun(){
 
     var arr = [];                          
+    var a = document.getElementsByClassName("hk");
 
-for (var i = 0; i < 5; i++) {              
-  arr.push(prompt('Enter Number ' + (i+1)));
-}
-
-for (var i=0; i<5; i++) {
-  document.write("<tr><td>Number " + i + " is:</td>");
-  document.write("<td>" + arr[i] + "</td></tr>");
+        console.log(a);
+        
+    for (var i = 0; i < 5; i++) {              
+        arr.push(a[i].value + '<br>');
+    }
+    for (var i=0; i<5; i++) {
+        document.write("<tr><td>Number " + i + " is: </td>");
+        document.write("<td>" + arr[i] + "</td></tr>");
+    }
 }
 
 
