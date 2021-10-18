@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+   <center>
+    <div>
+        <h1>Matrix Calculation : Kamran</h1>
+        <div >
+            <div>
+                <div>
+                    <input id="m11" placeholder="0" type="number"></input>
+                    <input id="m12" placeholder="0" type="number"></input>
+                    <input id="m13" placeholder="0" type="number"></input>
+                </div>
+                <div>
+                    <input id="m21" placeholder="0" type="number"></input>
+                    <input id="m22" placeholder="0" type="number"></input>
+                    <input id="m23" placeholder="0" type="number"></input>
+                </div>
+                <div >
+                    <input  id="m31" placeholder="0" type="number"></input>
+                    <input  id="m32" placeholder="0" type="number"></input>
+                    <input  id="m33" placeholder="0" type="number"></input>
+                </div>
+            </div>
+            <div>
+                <h1>+</h1>
+            </div>
+            <div>
+                <div>
+                    <input  id="m41" placeholder="0" type="number"></input>
+                    <input  id="m42" placeholder="0" type="number"></input>
+                    <input  id="m43" placeholder="0" type="number"></input>
+                </div>
+                <div >
+                    <input id="m51" placeholder="0" type="number"></input>
+                    <input id="m52" placeholder="0" type="number"></input>
+                    <input id="m53" placeholder="0" type="number"></input>
+                </div>
+                <div >
+                    <input  id="m61" placeholder="0" type="number"></input>
+                    <input id="m62" placeholder="0" type="number"></input>
+                    <input id="m63" placeholder="0" type="number"></input>
+                </div>
+            </div>
+        </div>
+        <div >
+            <h1>=</h1>
+
+        </div>
+
+        <div >
+            <div >
+                <input   id="m71" placeholder="0"></input>
+                <input   id="m72" placeholder="0"></input>
+                <input   id="m73" placeholder="0"></input>
+            </div>
+            <div>
+                <input  id="m81" placeholder="0"></input>
+                <input  id="m82" placeholder="0"></input>
+                <input  id="m83" placeholder="0"></input>
+            </div>
+            <div>
+                <input  id="m91" placeholder="0"></input>
+                <input  id="m92" placeholder="0"></input>
+                <input  id="m93" placeholder="0"></input>
+            </div>
+
+        </div>
+        <div class="submit_btn">
+            <button class="btn" onclick="cal()">subtract</button>
+            <button class="btn" onclick="add()">add</button
+        </div>
+    </div>
+</center>
+    <script>
+        const cal = () => {
+    let m11 = Number(document.getElementById("m11").value);
+    let m12 = Number(document.getElementById("m12").value);
+    let m13 = Number(document.getElementById("m13").value);
+    let m21 = Number(document.getElementById("m21").value);
+    let m22 = Number(document.getElementById("m22").value);
+    let m23 = Number(document.getElementById("m23").value);
+    let m31 = Number(document.getElementById("m31").value);
+    let m32 = Number(document.getElementById("m32").value);
+    let m33 = Number(document.getElementById("m33").value);
+
+    let m41 = Number(document.getElementById("m41").value);
+    let m42 = Number(document.getElementById("m42").value);
+    let m43 = Number(document.getElementById("m43").value);
+    let m51 = Number(document.getElementById("m51").value);
+    let m52 = Number(document.getElementById("m52").value);
+    let m53 = Number(document.getElementById("m53").value);
+    let m61 = Number(document.getElementById("m61").value);
+    let m62 = Number(document.getElementById("m62").value);
+    let m63 = Number(document.getElementById("m63").value);
+
+    let c1 = [
+        [m11,m12,m13],
+        [m21,m22,m23],
+        [m31,m32,m33]
+    ];
+
+    let c2 = [
+        [m41,m42,m43],
+        [m51,m52,m53],
+        [m61,m62,m63]
+    ];
+
+    let c3 = [
+        [0,0,0],
+        [0,0,0],
+        [0,0,0]
+    ];
+    for(let i=0;i<c1.length;i++){
+        for(let j=0;j<c2.length;j++){
+            c3[i][j] = c1[i][j] - c2[i][j]
+        }
+    }
+    
+     
+    let a = document.getElementById("m71").value = c3[0][0];
+    let b = document.getElementById("m72").value = c3[0][1];
+    let c = document.getElementById("m73").value = c3[0][2];
+    let d = document.getElementById("m81").value = c3[1][0];
+    let e = document.getElementById("m82").value = c3[1][1];
+    let f = document.getElementById("m83").value = c3[1][2];
+    let g = document.getElementById("m91").value = c3[2][0];
+    let h = document.getElementById("m92").value = c3[2][1];
+    let i = document.getElementById("m93").value = c3[2][2];
+    let d1 = document.getElementById('a');
+    //  d1.innerHTML = a
+    console.log(a);
+}
+
+const add = () => {
+    let m11 = Number(document.getElementById("m11").value);
+    let m12 = Number(document.getElementById("m12").value);
+    let m13 = Number(document.getElementById("m13").value);
+    let m21 = Number(document.getElementById("m21").value);
+    let m22 = Number(document.getElementById("m22").value);
+    let m23 = Number(document.getElementById("m23").value);
+    let m31 = Number(document.getElementById("m31").value);
+    let m32 = Number(document.getElementById("m32").value);
+    let m33 = Number(document.getElementById("m33").value);
+
+    let m41 = Number(document.getElementById("m41").value);
+    let m42 = Number(document.getElementById("m42").value);
+    let m43 = Number(document.getElementById("m43").value);
+    let m51 = Number(document.getElementById("m51").value);
+    let m52 = Number(document.getElementById("m52").value);
+    let m53 = Number(document.getElementById("m53").value);
+    let m61 = Number(document.getElementById("m61").value);
+    let m62 = Number(document.getElementById("m62").value);
+    let m63 = Number(document.getElementById("m63").value);
+
+    let c1 = [
+        [m11,m12,m13],
+        [m21,m22,m23],
+        [m31,m32,m33]
+    ];
+
+    let c2 = [
+        [m41,m42,m43],
+        [m51,m52,m53],
+        [m61,m62,m63]
+    ];
+
+    let c3 = [
+        [0,0,0],
+        [0,0,0],
+        [0,0,0]
+    ];
+    for(let i=0;i<c1.length;i++){
+        for(let j=0;j<c2.length;j++){
+            c3[i][j] = c1[i][j] + c2[i][j]
+        }
+    }
+    
+     
+    let a = document.getElementById("m71").value = c3[0][0];
+    let b = document.getElementById("m72").value = c3[0][1];
+    let c = document.getElementById("m73").value = c3[0][2];
+    let d = document.getElementById("m81").value = c3[1][0];
+    let e = document.getElementById("m82").value = c3[1][1];
+    let f = document.getElementById("m83").value = c3[1][2];
+    let g = document.getElementById("m91").value = c3[2][0];
+    let h = document.getElementById("m92").value = c3[2][1];
+    let i = document.getElementById("m93").value = c3[2][2];
+    let d1 = document.getElementById('a');
+    //  d1.innerHTML = a
+    console.log(a);
+}
+    </script>
+</body>
+</html>
